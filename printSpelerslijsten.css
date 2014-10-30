@@ -4,10 +4,9 @@ html{
 }
 body {
     box-sizing: border-box; 
-    width: 595pt;
+    width: 595pt; /* dit is a4: 210 mm = 595 pt */
     margin: 10pt auto;
     padding: 10pt 20pt;
-    background-color: #eee;
     font-family: Helvetica, Arial , sans-serif;
     font-size: 12pt;
     line-height: 14pt;
@@ -15,9 +14,24 @@ body {
 
 
 article {
-    page-break-after: always;
+    page-break-before: always; /* om te printen wordt iedere divisie op een nieuwe pagina geprint */
     
 }
+/* ieder team in eensection */
+section {
+    
+}
+/* header per team*/
+section > header {
+    background-color: orange;
+    margin: 0;
+    padding: 8pt 4pt;
+}
+section > header > h1, section > header > p{
+    margin: 2pt 0;
+    display:inline-block;
+}
+/* Lijst met spelers in een OL in 3 kolommen verdeeld */
 section > ol {
     box-sizing: border-box; 
     margin: 0 0 10pt 0;
@@ -28,12 +42,21 @@ section > ol {
 }
 section > ol > li {
     list-style-position: inside;
-    /* 
-    width: 30%;
-    float: left;
-    */
 }
-/* extra spelers*/
+/* Spelers informatie (voornaam, achternaam, nummer) in een ul */
+section > ol ul{
+    box-sizing: border-box; 
+    display: inline-block;
+    margin: 4pt 0;
+    padding: 0;
+}
+section > ol ul > li{
+    display: inline-block;
+    margin: 0;
+    padding: 0;
+}
+
+/* Lijst met extra spelers om in te vullen en odnertekenen */
 section > ul {
     box-sizing: border-box; 
     margin: 0 0 20pt 0;
@@ -52,22 +75,3 @@ section > ul > li:nth-child(3){
     border: 1pt black solid;
 }
 
-/* header per team*/
-section > header {
-    background-color: #ccc;
-    margin: 0;
-}
-section > header > h1, section > header > p{
-    margin: 2pt 0;
-}
-section > ol ul{
-    box-sizing: border-box; 
-    display: inline-block;
-    margin: 4pt 0;
-    padding: 0;
-}
-section > ol ul > li{
-    display: inline-block;
-    margin: 0;
-    padding: 0;
-}

@@ -61,31 +61,44 @@ section > ul {
     box-sizing: border-box; 
     margin: 0 0 20pt 0;
     padding: 10pt 0;
+    /*
     display: flex;
     flex-direction: row;
     flex-wrap: wrap;
-    
+    */
+    position: relative;
+    height: 120pt;
+    list-style: none;
 }
 section > ul > li{
-    display: inline-block;
-    width: 22%;
+    position: absolute;
 }
 section > ul > li:nth-child(1){
     text-align: right;
+    width: 140pt;
     height: 100pt;
-}
-section > ul > li:nth-child(2), section > ul > li:nth-child(3){
-    border-bottom: 1pt black dashed;
-    height: 40pt;
 }
 section > ul > li:nth-child(2){
-    align-self: flex-start;
+    width: 180pt;
+    height: 20pt;
+    left: 160pt;
+    top: 10pt;
 }
 section > ul > li:nth-child(3){
-    align-self: flex-end;
+    width: 180pt;
+    height: 20pt;
+    left: 160pt;
+    top: 50pt;
+}
+section > ul > li:nth-child(2), section > ul > li:nth-child(3){
+    border-bottom: 2pt black dashed;
 }
 section > ul > li:nth-child(4){
+    box-sizing: border-box;
     border: 1pt black solid;
-    height: 100pt;
+    width: 170pt;
+    height: 64pt;
+    left: 380pt;
+    padding: 4pt;
 }
 

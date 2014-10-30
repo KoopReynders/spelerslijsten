@@ -61,6 +61,9 @@ section > ul {
     box-sizing: border-box; 
     margin: 0 0 20pt 0;
     padding: 10pt 0;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
     
     background-color: pink;
 }
@@ -68,7 +71,6 @@ section > ul > li{
     display: inline-block;
     width: 22%;
 }
-
 section > ul > li:nth-child(1){
     text-align: right;
     height: 100pt;
@@ -76,6 +78,12 @@ section > ul > li:nth-child(1){
 section > ul > li:nth-child(2), section > ul > li:nth-child(3){
     border-bottom: 1pt black dashed;
     height: 40pt;
+}
+section > ul > li:nth-child(2){
+    align-self: flex-start;
+}
+section > ul > li:nth-child(3){
+    align-self: flex-end;
 }
 section > ul > li:nth-child(4){
     border: 1pt black solid;

@@ -1,0 +1,73 @@
+
+html{
+    background-color: #fff;
+}
+body {
+    box-sizing: border-box; 
+    width: 595pt;
+    margin: 10pt auto;
+    padding: 10pt 20pt;
+    background-color: #eee;
+    font-family: Helvetica, Arial , sans-serif;
+    font-size: 12pt;
+    line-height: 14pt;
+}
+
+
+article {
+    page-break-after: always;
+    
+}
+section > ol {
+    box-sizing: border-box; 
+    margin: 0 0 10pt 0;
+    padding: 0;
+    -webkit-column-count: 3;
+    -moz-column-count: 3;
+    column-count: 3;
+}
+section > ol > li {
+    list-style-position: inside;
+    /* 
+    width: 30%;
+    float: left;
+    */
+}
+/* extra spelers*/
+section > ul {
+    box-sizing: border-box; 
+    margin: 0 0 20pt 0;
+    padding: 10pt 0;
+    -webkit-column-count: 3;
+    -moz-column-count: 3;
+    column-count: 3;
+}
+section > ul > li:nth-child(1){
+    text-align: right;
+}
+section > ul > li:nth-child(2){
+    border-bottom: 1pt black dashed;
+}
+section > ul > li:nth-child(3){
+    border: 1pt black solid;
+}
+
+/* header per team*/
+section > header {
+    background-color: #ccc;
+    margin: 0;
+}
+section > header > h1, section > header > p{
+    margin: 2pt 0;
+}
+section > ol ul{
+    box-sizing: border-box; 
+    display: inline-block;
+    margin: 4pt 0;
+    padding: 0;
+}
+section > ol ul > li{
+    display: inline-block;
+    margin: 0;
+    padding: 0;
+}

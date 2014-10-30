@@ -65,7 +65,6 @@ section > ul {
     flex-direction: row;
     flex-wrap: wrap;
     
-    background-color: pink;
 }
 section > ul > li{
     display: inline-block;

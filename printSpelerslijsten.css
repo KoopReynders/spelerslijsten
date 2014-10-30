@@ -56,22 +56,29 @@ section > ol ul > li{
     padding: 0;
 }
 
-/* Lijst met extra spelers om in te vullen en odnertekenen */
+/* Lijst met extra spelers om in te vullen en ondertekenen */
 section > ul {
     box-sizing: border-box; 
     margin: 0 0 20pt 0;
     padding: 10pt 0;
-    -webkit-column-count: 3;
-    -moz-column-count: 3;
-    column-count: 3;
+    
+    background-color: pink;
 }
+section > ul > li{
+    display: inline-block;
+    width: 22%;
+}
+
 section > ul > li:nth-child(1){
     text-align: right;
+    height: 100pt;
 }
-section > ul > li:nth-child(2){
+section > ul > li:nth-child(2), section > ul > li:nth-child(3){
     border-bottom: 1pt black dashed;
+    height: 40pt;
 }
-section > ul > li:nth-child(3){
+section > ul > li:nth-child(4){
     border: 1pt black solid;
+    height: 100pt;
 }
 

@@ -3,8 +3,8 @@ html{
     background-color: #fff;
 }
 body {
-    box-sizing: border-box; 
     width: 595pt; /* dit is a4: 210 mm = 595 pt */
+    box-sizing: border-box; 
     margin: 10pt auto;
     padding: 10pt 20pt;
     font-family: Helvetica, Arial , sans-serif;
@@ -28,8 +28,8 @@ section > header {
     padding: 8pt 4pt;
 }
 section > header > h1, section > header > p{
-    margin: 2pt 0;
     display:inline-block;
+    margin: 2pt 0;
 }
 /* Lijst met spelers in een OL in 3 kolommen verdeeld */
 section > ol {
@@ -45,8 +45,8 @@ section > ol > li {
 }
 /* Spelers informatie (voornaam, achternaam, nummer) in een ul */
 section > ol ul{
-    box-sizing: border-box; 
     display: inline-block;
+    box-sizing: border-box;
     margin: 4pt 0;
     padding: 0;
 }
@@ -58,16 +58,11 @@ section > ol ul > li{
 
 /* Lijst met extra spelers om in te vullen en ondertekenen */
 section > ul {
+    position: relative;
+    height: 120pt;
     box-sizing: border-box; 
     margin: 0 0 20pt 0;
     padding: 10pt 0;
-    /*
-    display: flex;
-    flex-direction: row;
-    flex-wrap: wrap;
-    */
-    position: relative;
-    height: 120pt;
     list-style: none;
 }
 section > ul > li{
@@ -78,16 +73,13 @@ section > ul > li:nth-child(1){
     width: 140pt;
     height: 100pt;
 }
-section > ul > li:nth-child(2){
+section > ul > li:nth-child(2),section > ul > li:nth-child(3){
     width: 180pt;
     height: 20pt;
     left: 160pt;
     top: 10pt;
 }
 section > ul > li:nth-child(3){
-    width: 180pt;
-    height: 20pt;
-    left: 160pt;
     top: 50pt;
 }
 section > ul > li:nth-child(2), section > ul > li:nth-child(3){
@@ -95,10 +87,10 @@ section > ul > li:nth-child(2), section > ul > li:nth-child(3){
 }
 section > ul > li:nth-child(4){
     box-sizing: border-box;
-    border: 2pt black solid;
+    padding: 4pt;
     width: 170pt;
     height: 64pt;
     left: 380pt;
-    padding: 4pt;
+    border: 2pt black solid;
 }
 

@@ -19,7 +19,7 @@ article {
 }
 /* ieder team in eensection */
 section {
-    
+    page-break-inside: avoid;
 }
 /* header per team*/
 section > header {
@@ -32,28 +32,28 @@ section > header > h1, section > header > p{
     margin: 2pt 0;
 }
 /* Lijst met spelers in een OL in 3 kolommen verdeeld */
+/* Spelers informatie (voornaam, achternaam, nummer) in een li */
 section > ol {
     box-sizing: border-box; 
-    margin: 0 0 10pt 0;
+    margin: 4pt 0 10pt 0;
     padding: 0;
+    width: 100%;
     -webkit-column-count: 3;
     -moz-column-count: 3;
     column-count: 3;
+    background-color: pink;
 }
 section > ol > li {
-    list-style-position: inside;
-}
-/* Spelers informatie (voornaam, achternaam, nummer) in een ul */
-section > ol ul{
-    display: inline-block;
-    box-sizing: border-box;
-    margin: 4pt 0;
-    padding: 0;
-}
-section > ol ul > li{
-    display: inline-block;
+    /* width: 180pt;
+    height: 14pt; 
+    overflow:hidden; */
     margin: 0;
-    padding: 0;
+    padding: 2pt 0;
+    list-style-position:inside;
+-webkit-column-break-inside: avoid; /* Chrome, Safari, Opera */
+          page-break-inside: avoid; /* Firefox */
+               break-inside: avoid; /* IE 10+ */
+    background-color: gold;
 }
 
 /* Lijst met extra spelers om in te vullen en ondertekenen */

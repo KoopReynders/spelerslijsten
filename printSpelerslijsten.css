@@ -1,44 +1,45 @@
+* {
+   box-sizing: border-box; 
+}
 
 html{
     background-color: #fff;
 }
+
 body {
     width: 595pt; /* dit is a4: 210 mm = 595 pt */
-    box-sizing: border-box; 
     margin: 10pt auto;
     padding: 10pt 20pt;
-    font-family: Helvetica, Arial , sans-serif;
+    font-family: Helvetica, Arial, sans-serif;
     font-size: 12pt;
     line-height: 16pt;
 }
 
-
 article {
     page-break-before: always; /* om te printen wordt iedere divisie op een nieuwe pagina geprint */
 }
+
 /* ieder team zit in een section */
 section {
     page-break-inside: avoid;
     margin-bottom: 10pt
 }
-/* header per team*/
-section > header {
-    background-color: orange;
-    margin: 0;
-    padding: 8pt 4pt;
-    border: 1pt #000 solid;
-}
-section > header > h1, section > header > p{
-    display:inline-block;
-    margin: 2pt 0;
-}
+    /* header per team*/
+    section > header {
+        background-color: orange;
+        margin: 0;
+        padding: 8pt 4pt;
+        border: 1pt #000 solid;
+    }
+    section > header > h1, section > header > p{
+        display:inline-block;
+        margin: 2pt 0;
+    }
 /* Lijst met spelers in een OL in 3 kolommen verdeeld */
 /* Spelers informatie (voornaam, achternaam, nummer) in een li */
 section > ol {
-    box-sizing: border-box; 
     margin: 0;
     padding: 4pt 0;
-    width: 100%;
     /*
     -webkit-column-count: 3;
     -moz-column-count: 3;
@@ -49,70 +50,66 @@ section > ol {
     border: 1pt #000 solid;
     border-top: 0pt
 }
-section > ol > li {
-    display: inline-block;
-    width: 164pt;
-    position:relative;
-    margin-left:18pt;
-    list-style:none;
-    vertical-align: top;
-    padding: 2pt 0;
-    -webkit-column-break-inside: avoid; /* Chrome, Safari, Opera */
-          page-break-inside: avoid; /* Firefox */
-               break-inside: avoid; /* IE 10+ */
-
-}
-section > ol > li:before {
-    content:counter(li); /* Use the counter as content */
-    counter-increment:li; /* Increment the counter by 1 */  
-    
-    position:absolute;
-    top:2pt;
-    left:-18pt;
-    box-sizing:border-box;
-    width: 16pt;
-    text-align: center;
-}
+    section > ol > li {
+        display: inline-block;
+        width: 164pt;
+        position:relative;
+        margin-left:18pt;
+        list-style:none;
+        vertical-align: top;
+        padding: 2pt 0;
+        -webkit-column-break-inside: avoid; /* Chrome, Safari, Opera */
+        page-break-inside: avoid; /* Firefox */
+        break-inside: avoid; /* IE 10+ */
+    }
+    section > ol > li:before {
+        content:counter(li); /* Use the counter as content */
+        counter-increment:li; /* Increment the counter by 1 */  
+        position:absolute;
+        top:2pt;
+        left:-18pt;
+        width: 16pt;
+        text-align: center;
+    }
 
 /* Lijst met extra spelers om in te vullen en ondertekenen */
 section > ul {
     position: relative;
-    height: 80pt;
-    box-sizing: border-box; 
+    height: 80pt; 
     margin: 0;
     padding: 0;
     list-style: none;
     border: 1pt #000 solid;
     border-top: 0pt
 }
-section > ul > li{
-    position: absolute;
-}
-section > ul > li:nth-child(1){
-    text-align: left;
-    width: 120pt;
-    left: 18pt;
-    top: 32pt;
-}
-section > ul > li:nth-child(2),section > ul > li:nth-child(3){
-    width: 180pt;
-    height: 20pt;
-    left: 160pt;
-    top: 10pt;
-}
-section > ul > li:nth-child(3){
-    top: 40pt;
-}
-section > ul > li:nth-child(2), section > ul > li:nth-child(3){
-    border-bottom: 1pt black dashed;
-}
-section > ul > li:nth-child(4){
-    box-sizing: border-box;
-    padding: 8pt;
-    padding-top: 32pt;
-    width: 170pt;
-    height: 80pt;
-    left: 380pt;
-    border-left: 1pt black solid;
-}
-
+    section > ul > li{
+        position: absolute;
+    }
+    section > ul > li:nth-child(1){
+        text-align: left;
+        width: 120pt;
+        height: 20pt;
+        left: 18pt;
+        top: 32pt;
+    }
+    section > ul > li:nth-child(2),section > ul > li:nth-child(3){
+        width: 200pt;
+        height: 20pt;
+        left: 150pt;
+        top: 10pt;
+    }
+    section > ul > li:nth-child(3){
+        top: 40pt;
+    }
+    section > ul > li:nth-child(2), section > ul > li:nth-child(3){
+        border-bottom: 1pt black dashed;
+    }
+    section > ul > li:nth-child(4){
+        padding: 0pt 6pt;
+        width: 180pt;
+        height: 80pt;
+        left: 370pt;
+        top:0;
+        border-left: 1pt black solid;
+        line-height: 80pt;
+    }

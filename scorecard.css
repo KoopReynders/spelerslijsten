@@ -1,0 +1,107 @@
+* {
+   box-sizing: border-box; 
+}
+
+html{
+    background-color: #fff;
+}
+
+body {
+    width: 595pt; /* dit is a4: 210 mm = 595 pt */
+    margin: 10pt auto;
+    padding: 10pt 20pt;
+    font-family: Helvetica, Arial, sans-serif;
+    font-size: 11pt;
+    line-height: 16pt;
+}
+
+article {
+    page-break-before: always; /* om te printen wordt iedere divisie op een nieuwe pagina geprint */
+    margin-bottom: 2pt;
+}
+    /* header per divisie */
+    article > header {
+        background-color: orange;
+        margin: 0;
+        padding: 0 8pt;
+        border: 1pt #000 solid;
+    }
+/* Lijst met wedstrijden */
+/* Spelers informatie (voornaam, achternaam, nummer) in een li */
+article > ol {
+    margin: 0;
+    padding: 8pt;
+    padding-bottom: 12pt;
+    border: 1pt #000 solid;
+    border-top: 0pt;
+    list-style:none;
+}
+    article > ol > li {
+        margin: 0;
+        padding: 2pt 0;
+        -webkit-column-break-inside: avoid; /* Chrome, Safari, Opera */
+        page-break-inside: avoid; /* Firefox */
+        break-inside: avoid; /* IE 10+ */
+    }
+    article > ol > li:first-child > ul {
+        font-weight: bold;
+    }
+    article > ol > li > ul {
+        margin: 0;
+        padding: 4pt 0;
+        list-style: none;
+        border-bottom: 1px orange solid;
+    }
+    article > ol > li:last-child > ul {
+        border: 0;
+    }
+    article > ol > li > ul > li {
+        display: inline-block;
+    }
+    article > ol > li > ul > li:nth-child(1) {
+        width: 100pt;
+    }
+    article > ol > li > ul > li:nth-child(2) {
+        width: 80pt;
+    }
+    article > ol > li > ul > li:nth-child(3) {
+        width: 130pt;
+        text-align: right;
+    }
+    article > ol > li > ul > li:nth-child(4) {
+        width: 60pt;
+        text-align: center;
+    }
+    article > ol > li > ul > li:nth-child(5) {
+    }
+
+    
+/* Signature */
+article > ul {
+    position: relative;
+    height: 60pt; 
+    margin: 0;
+    padding: 0;
+    list-style: none;
+    border: 1pt #000 solid;
+    border-top: 0pt
+}
+    article > ul > li{
+        position: absolute;
+    }
+    article > ul > li:nth-child(1){
+        text-align: right;
+        width: 180pt;
+        height: 20pt;
+        left: 0pt;
+        top: 22pt;
+    }
+    article > ul > li:nth-child(2){
+        padding: 0pt 6pt;
+        width: 180pt;
+        height: 60pt;
+        left: 190pt;
+        top:0;
+        border-left: 1pt black solid;
+        line-height: 60pt;
+    }

@@ -11,7 +11,7 @@ body {
     margin: 10pt auto;
     padding: 10pt 20pt;
     font-family: Helvetica, Arial, sans-serif;
-    font-size: 12pt;
+    font-size: 11pt;
     line-height: 16pt;
 }
 
@@ -35,6 +35,14 @@ section {
         display:inline-block;
         margin: 2pt 0;
     }
+/* No players registered yet. */
+section > p {
+    margin: 0;
+    padding: 10pt 6pt;
+    border: 1pt #000 solid;
+    border-top: 0pt;
+    font-style: italic;
+}
 /* Lijst met spelers in een OL in 3 kolommen verdeeld */
 /* Spelers informatie (voornaam, achternaam, nummer) in een li */
 section > ol {

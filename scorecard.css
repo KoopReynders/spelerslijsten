@@ -27,81 +27,125 @@ article {
         border: 1pt #000 solid;
     }
 /* Lijst met wedstrijden */
-/* Spelers informatie (voornaam, achternaam, nummer) in een li */
 article > ol {
     margin: 0;
-    padding: 8pt;
-    padding-bottom: 12pt;
-    border: 1pt #000 solid;
+    padding: 4pt 8pt;
+    padding-bottom: 20pt;
+    border: 1pt black solid;
     border-top: 0pt;
     list-style:none;
 }
     article > ol > li {
         margin: 0;
-        padding: 2pt 0;
+        padding: 0;
         -webkit-column-break-inside: avoid; /* Chrome, Safari, Opera */
         page-break-inside: avoid; /* Firefox */
         break-inside: avoid; /* IE 10+ */
     }
-    article > ol > li:first-child > ul {
-        font-weight: bold;
-    }
     article > ol > li > ul {
         margin: 0;
-        padding: 4pt 0;
+        padding: 0;
+        height: 35pt;
         list-style: none;
-        border-bottom: 1px orange solid;
-    }
-    article > ol > li:last-child > ul {
-        border: 0;
+        border-bottom: 1px black solid;
+        position: relative;
     }
     article > ol > li > ul > li {
-        display: inline-block;
+        display: block;
+        position: absolute;
+        margin: 0;
+        padding: 0;
+        height: 35pt;
+        line-height: 35pt;
     }
-    article > ol > li > ul > li:nth-child(1) {
+    article > ol > li > ul > li:nth-child(1) { /* date */
         width: 100pt;
+        left: 0;
     }
-    article > ol > li > ul > li:nth-child(2) {
+    article > ol > li > ul > li:nth-child(2) { /* field */
         width: 80pt;
+        left: 100pt;
     }
-    article > ol > li > ul > li:nth-child(3) {
+    article > ol > li > ul > li:nth-child(3) { /* team 1 */
         width: 130pt;
+        left: 180pt;
         text-align: right;
+        padding-right: 6pt;
     }
-    article > ol > li > ul > li:nth-child(4) {
-        width: 60pt;
+    article > ol > li > ul > li:nth-child(4) { /* score team 1 */
+        width: 50pt;
+        left: 310pt;
+        text-align: center;
+        border: 1pt black solid;
+        border-top: none;
+    }
+    article > ol > li > ul > li:nth-child(5) { /* score team 2 */
+        width: 50pt;
+        left: 360pt;
+        text-align: center;
+        border: 1pt black solid;
+        border-top: none;
+        border-left: none;
+    }
+    article > ol > li > ul > li:nth-child(6) { /* team 2 */
+        width: 130pt;
+        left: 410pt;
+        padding-left: 6pt;
+    }
+    /* first title list */
+    article>ol>li:first-child>ul {
+        font-weight: bold;
+        height: 20pt;
+    }
+    article>ol>li:first-child>ul>li {
+        line-height: 20pt;
+        height: 20pt;
+    }
+    article>ol>li:first-child>ul>li:nth-child(4){
+        width: 100pt;
+        left: 310pt;
+        border: none;
         text-align: center;
     }
-    article > ol > li > ul > li:nth-child(5) {
+    article>ol>li:first-child>ul>li:nth-child(5){
+        border: none;
+        left: 410pt;
+        padding-left: 6pt;
+        text-align: left;
+    }
+    article > ol > li:last-child > ul {
+        
     }
 
     
 /* Signature */
 article > ul {
     position: relative;
-    height: 60pt; 
+    height: 35pt; 
     margin: 0;
     padding: 0;
     list-style: none;
     border: 1pt #000 solid;
-    border-top: 0pt
+    border-top: 0pt;
 }
+
+
     article > ul > li{
         position: absolute;
+        height: 35pt;
     }
     article > ul > li:nth-child(1){
         text-align: right;
-        width: 180pt;
-        height: 20pt;
+        width: 170pt;
         left: 0pt;
-        top: 22pt;
+        top: 0pt;
+        line-height: 35pt;
     }
     article > ul > li:nth-child(2){
         padding: 0pt 6pt;
         width: 180pt;
-        height: 60pt;
-        left: 190pt;
+        left: 175pt;
         top:0;
         border-left: 1pt black solid;
-        line-height: 60pt;
+        line-height: 35pt;    
     }
